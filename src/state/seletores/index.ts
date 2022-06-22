@@ -1,11 +1,11 @@
 import { selector } from "recoil";
 import { IEvento } from "../../interfaces/IEvento";
-import { filtroDeEventos, listaDeEventosState } from "../atom";
+import { filtroDeEventosState, listaDeEventosState } from "../atom";
 
 export const eventosFiltradosState = selector({
     key: 'eventosFiltradosState',
     get: ({ get }) => {
-        const filtro = get(filtroDeEventos)
+        const filtro = get(filtroDeEventosState)
         const todosOsEventos = get(listaDeEventosState)
         const eventos = todosOsEventos.filter(evento => {
             if (!filtro.data) {

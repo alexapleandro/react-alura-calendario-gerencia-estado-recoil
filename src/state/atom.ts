@@ -9,7 +9,7 @@ export const listaDeEventosState = atom<IEvento[]>({
     default: eventosAsync
 })
 
-export const filtroDeEventos = atom<IFiltroDeEventos>({
+export const filtroDeEventosState = atom<IFiltroDeEventos>({
     key: 'filtroDeEventos',
     default: {}
 })
